@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bba4c499-8ca8-4f8d-9643-6fe2da760cb9" name="Changes" comment="">
+    <list default="true" id="bba4c499-8ca8-4f8d-9643-6fe2da760cb9" name="Changes" comment="Copies in all the given source code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddressBook.java" afterDir="false" />
     </list>
@@ -11,6 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -38,8 +39,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680865999199</updated>
-      <workItem from="1680866000500" duration="5023000" />
+      <workItem from="1680866000500" duration="7695000" />
     </task>
+    <task id="LOCAL-00001" summary="Copies in all the given source code">
+      <created>1680887797295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680887797295</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -55,5 +64,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Copies in all the given source code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Copies in all the given source code" />
   </component>
 </project>

@@ -482,8 +482,8 @@ public class AddressBook extends JFrame implements ActionListener
         mobile[currentSize] = newMobile;
         email[currentSize] = newEmail;
         currentSize++;                       // Count one more contact
-        if(currentSize==1) {
-            return currentSize - 1;
+        if(currentSize<=10) {
+            return currentSize - 1;         //success, return where added
         }
         else{
             return -1;
