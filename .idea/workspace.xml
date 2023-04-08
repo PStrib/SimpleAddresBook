@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bba4c499-8ca8-4f8d-9643-6fe2da760cb9" name="Changes" comment="fixes the addContact btn">
+    <list default="true" id="bba4c499-8ca8-4f8d-9643-6fe2da760cb9" name="Changes" comment="Implements deleteContact (with an error)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddressBook.java" afterDir="false" />
     </list>
@@ -40,7 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680865999199</updated>
       <workItem from="1680866000500" duration="8489000" />
-      <workItem from="1680963944761" duration="5945000" />
+      <workItem from="1680963944761" duration="7756000" />
     </task>
     <task id="LOCAL-00001" summary="Copies in all the given source code">
       <created>1680887797295</created>
@@ -56,7 +56,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680902837796</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implements deleteContact (with an error)">
+      <created>1680970023089</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680970023089</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,6 +83,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Copies in all the given source code" />
     <MESSAGE value="fixes the addContact btn" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes the addContact btn" />
+    <MESSAGE value="Implements deleteContact (with an error)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implements deleteContact (with an error)" />
   </component>
 </project>
