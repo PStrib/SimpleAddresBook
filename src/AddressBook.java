@@ -524,6 +524,9 @@ public class AddressBook extends JFrame implements ActionListener
     private void clearContacts()
     {
         // TO BE DONE: Implement this method body - see comments above
+        for (int i=0; i<databaseSize; i++){
+            deleteContact(i);
+        }
         // Note: This is *very* simple!
     } // End of clearContacts
 
