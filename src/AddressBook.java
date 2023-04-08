@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Arrays;
 import javax.swing.*;
 import javax.swing.event.*;
 
@@ -500,7 +501,22 @@ public class AddressBook extends JFrame implements ActionListener
     private void deleteContact(int index)
     {
         // TO BE DONE: Implement this method body - see comments above
+        String[][] arrays={name,address,mobile, email};
+        for (int i=0; i<(arrays.length); i++){
+            removeOneValue(index, arrays[i] );
+        }
     } // End of deleteContact
+
+    private void removeOneValue(int index, String[]array) {
+        for (int i = index; i<array.length-1; i++){
+            if(i!=9) {
+                array[i] = array[i + 1];
+            }
+            else{
+                array[i]= null;
+            }
+        }
+    }
 
     /**
      * Clear the contacts database - set to empty
