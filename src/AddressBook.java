@@ -1,6 +1,9 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import javax.swing.*;
 import javax.swing.event.*;
 
@@ -506,7 +509,6 @@ public class AddressBook extends JFrame implements ActionListener
             removeOneValue(index, array);
         }
         currentSize-=1;
-        System.out.println("CurrentSize="+currentSize);
     } // End of deleteContact
 
     private void removeOneValue(int index, String[]array) {
@@ -559,6 +561,19 @@ public class AddressBook extends JFrame implements ActionListener
     private void sortAtoZ()
     {
         // TO BE DONE: Implement this method body - see comments above
+        //Arrays.sort(name);
+        HashMap<String, String> hm=new HashMap<String, String>();
+        for(int i=0; i<currentSize; i++){
+            hm.put(name[i], address[i]);
+        }
+        HashMap<String, String> hm1=new HashMap<String, String>();
+        for(int i=0; i<currentSize; i++){
+            hm1.put(name[i], mobile[i]);
+        }
+        HashMap<String, String> hm2=new HashMap<String, String>();
+        for(int i=0; i<currentSize; i++){
+            hm2.put(name[i], email[i]);
+        }
     }
 
     /**
@@ -567,6 +582,7 @@ public class AddressBook extends JFrame implements ActionListener
     private void sortZtoA()
     {
         // TO BE DONE: Implement this method body - see comments above
+        //call sortAtoZ then reverse the arrays
     }
 
 } // End of AddressBook
