@@ -1,10 +1,12 @@
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
 import javax.swing.*;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.Iterator;
 import javax.swing.event.*;
 
 /**
@@ -560,19 +562,27 @@ public class AddressBook extends JFrame implements ActionListener
      */
     private void sortAtoZ()
     {
-        // TO BE DONE: Implement this method body - see comments above
-        //Arrays.sort(name);
-        HashMap<String, String> hm=new HashMap<String, String>();
-        for(int i=0; i<currentSize; i++){
-            hm.put(name[i], address[i]);
-        }
-        HashMap<String, String> hm1=new HashMap<String, String>();
-        for(int i=0; i<currentSize; i++){
-            hm1.put(name[i], mobile[i]);
-        }
-        HashMap<String, String> hm2=new HashMap<String, String>();
-        for(int i=0; i<currentSize; i++){
-            hm2.put(name[i], email[i]);
+        String tempName, tempAddress, tempMobile, tempEmail;
+        // Sorting strings using bubble sort
+        for (int j = 0; j < currentSize - 1; j++) {
+            for (int i = j + 1; i < currentSize; i++) {
+                if (name[j].compareTo(name[i]) > 0) {
+                    tempName = name[j];
+                    tempAddress = address[j];
+                    tempMobile=mobile[j];
+                    tempEmail=email[j];
+
+                    name[j] = name[i];
+                    address[j]=address[i];
+                    mobile[j]=mobile[i];
+                    email[j]=email[i];
+
+                    name[i] = tempName;
+                    address[i]=tempAddress;
+                    mobile[i]=tempMobile;
+                    email[i]=tempEmail;
+                }
+            }
         }
     }
 
