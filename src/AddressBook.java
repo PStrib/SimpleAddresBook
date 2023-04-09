@@ -506,6 +506,7 @@ public class AddressBook extends JFrame implements ActionListener
             removeOneValue(index, array);
         }
         currentSize-=1;
+        System.out.println("CurrentSize="+currentSize);
     } // End of deleteContact
 
     private void removeOneValue(int index, String[]array) {
@@ -524,7 +525,7 @@ public class AddressBook extends JFrame implements ActionListener
     private void clearContacts()
     {
         // TO BE DONE: Implement this method body - see comments above
-        for (int i=0; i<databaseSize; i++){
+        for (int i=currentSize; i>0; i--){
             deleteContact(i);
         }
         // Note: This is *very* simple!
