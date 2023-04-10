@@ -481,8 +481,6 @@ public class AddressBook extends JFrame implements ActionListener
      */
     private int addContact(String newName, String newAddress, String newMobile, String newEmail)
     {
-        // TO BE DONE: Need to check if there is space available, and return -1 if not
-
         name[currentSize] = newName;         // Add data at first free element in each array
         address[currentSize] = newAddress;
         mobile[currentSize] = newMobile;
@@ -521,14 +519,14 @@ public class AddressBook extends JFrame implements ActionListener
             }
             array[i] = array[i + 1];
         }
-    }
+    } // End of removeOneValue
 
     /**
      * Clear the contacts database - set to empty
      */
     private void clearContacts()
     {
-        // TO BE DONE: Implement this method body - see comments above
+        //Calls the deleteContact method for every contact
         for (int i=currentSize; i>0; i--){
             deleteContact(i);
         }
@@ -562,11 +560,19 @@ public class AddressBook extends JFrame implements ActionListener
      */
     private void sortAtoZ()
     {
-        // Sorting strings using bubble sort
+
+    }
+
+    /**
+     * Re-order the contacts in the database so that the names are in descending alphabetic order
+     */
+    private void sortZtoA()
+    {
+        // Sorting strings reverse-alphabetically using bubble sort
         String tempName, tempAddress, tempMobile, tempEmail;    //Setting the temporary variables for the bubbleSort
         for (int j = 0; j < currentSize - 1; j++) {     //Outer for-loop one behind the inner loop
             for (int i = j + 1; i < currentSize; i++) {     //Inner for-loop one ahead of the outer loop
-                if (name[j].compareTo(name[i]) > 0) {       //if the lower indexed name is higher alphabetically
+                if (name[j].compareTo(name[i]) < 0) {       //if the lower indexed name is lower alphabetically
                     tempName = name[j];            //Assign the current lower indexed value to the temp variable
                     tempAddress = address[j];      //Then do the same for the accompanying variables (address, mobile and email)
                     tempMobile=mobile[j];          // ^^^
@@ -585,17 +591,6 @@ public class AddressBook extends JFrame implements ActionListener
                 }
             }
         }
-    }
-
-    /**
-     * Re-order the contacts in the database so that the names are in descending alphabetic order
-     */
-    private void sortZtoA()
-    {
-        // TO BE DONE: Implement this method body - see comments above
-        sortAtoZ();     //Make sure the arrays are ordered before I reverse them
-
-        //call sortAtoZ then reverse the arrays
     }
 
 } // End of AddressBook
