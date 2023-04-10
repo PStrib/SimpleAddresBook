@@ -562,25 +562,26 @@ public class AddressBook extends JFrame implements ActionListener
      */
     private void sortAtoZ()
     {
-        String tempName, tempAddress, tempMobile, tempEmail;
         // Sorting strings using bubble sort
-        for (int j = 0; j < currentSize - 1; j++) {
-            for (int i = j + 1; i < currentSize; i++) {
-                if (name[j].compareTo(name[i]) > 0) {
-                    tempName = name[j];
-                    tempAddress = address[j];
-                    tempMobile=mobile[j];
-                    tempEmail=email[j];
+        String tempName, tempAddress, tempMobile, tempEmail;    //Setting the temporary variables for the bubbleSort
+        for (int j = 0; j < currentSize - 1; j++) {     //Outer for-loop one behind the inner loop
+            for (int i = j + 1; i < currentSize; i++) {     //Inner for-loop one ahead of the outer loop
+                if (name[j].compareTo(name[i]) > 0) {       //if the lower indexed name is higher alphabetically
+                    tempName = name[j];            //Assign the current lower indexed value to the temp variable
+                    tempAddress = address[j];      //Then do the same for the accompanying variables (address, mobile and email)
+                    tempMobile=mobile[j];          // ^^^
+                    tempEmail=email[j];            // ^^^
 
-                    name[j] = name[i];
-                    address[j]=address[i];
-                    mobile[j]=mobile[i];
-                    email[j]=email[i];
+                    name[j] = name[i];          //Copy the lower value string into the lower index
+                    address[j]=address[i];      //Repeat for the accompanying variables
+                    mobile[j]=mobile[i];        // ^^^
+                    email[j]=email[i];          // ^^^
 
-                    name[i] = tempName;
-                    address[i]=tempAddress;
-                    mobile[i]=tempMobile;
-                    email[i]=tempEmail;
+                    name[i] = tempName;         //Copy the value from the temp variables to the higher index position
+                    address[i]=tempAddress;     //Do the same for the accompanying variables
+                    mobile[i]=tempMobile;       // ^^^
+                    email[i]=tempEmail;         // ^^^
+                    //The swap has been completed and the loops iterate again until there are no more swaps made
                 }
             }
         }
@@ -592,6 +593,8 @@ public class AddressBook extends JFrame implements ActionListener
     private void sortZtoA()
     {
         // TO BE DONE: Implement this method body - see comments above
+        sortAtoZ();     //Make sure the arrays are ordered before I reverse them
+
         //call sortAtoZ then reverse the arrays
     }
 
