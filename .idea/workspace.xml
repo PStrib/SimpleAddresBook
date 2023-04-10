@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bba4c499-8ca8-4f8d-9643-6fe2da760cb9" name="Changes" comment="Deletes sortAtoZ and implements sortZtoA as a bubbleSort">
+    <list default="true" id="bba4c499-8ca8-4f8d-9643-6fe2da760cb9" name="Changes" comment="Comments out hashMapSort and uses bubbleSort for sortAtoZ method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddressBook.java" afterDir="false" />
     </list>
@@ -30,7 +30,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -110,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681135350700</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Comments out hashMapSort and uses bubbleSort for sortAtoZ method">
+      <created>1681143345990</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681143345990</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +142,7 @@
     <MESSAGE value="Removes the debug print statement and starts work on the sortAtoZ statement" />
     <MESSAGE value="Adds in commentation for the sortAtoZ method" />
     <MESSAGE value="Deletes sortAtoZ and implements sortZtoA as a bubbleSort" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deletes sortAtoZ and implements sortZtoA as a bubbleSort" />
+    <MESSAGE value="Comments out hashMapSort and uses bubbleSort for sortAtoZ method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments out hashMapSort and uses bubbleSort for sortAtoZ method" />
   </component>
 </project>

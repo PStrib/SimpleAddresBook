@@ -504,18 +504,18 @@ public class AddressBook extends JFrame implements ActionListener
      */
     private void deleteContact(int index)
     {
-        // TO BE DONE: Implement this method body - see comments above
-        String[][] arrays={name,address,mobile, email};
-        for (String[] array : arrays){
-            removeOneValue(index, array);
+        String[][] arrays={name,address,mobile, email};     // Creates an array that holds all the contact info arrays
+        for (String[] array : arrays){                      // Iterates through all the different arrays...
+            removeOneValue(index, array);                   // And deletes the appropriate record from each of them
         }
-        currentSize-=1;
+        currentSize-=1;     // Decrease the stated size of the 'used' array
     } // End of deleteContact
 
     private void removeOneValue(int index, String[]array) {
+        // This function sets one value from one array to null
         for (int i = index; i<array.length-1; i++){
-            if(i>=databaseSize-1){
-                array[i]= null;
+            if(i>=databaseSize-1){      // If the
+                array[i]= null;         //
                 continue;
             }
             array[i] = array[i + 1];
@@ -542,6 +542,12 @@ public class AddressBook extends JFrame implements ActionListener
     private int findContact(String searchName)
     {
         // TO BE DONE: Implement this method body - see comments above
+        for(int i=0; i<currentSize; i++){
+            System.out.println(name[i]);
+            if(name[i].equalsIgnoreCase(searchName)){
+                return i;
+            }
+        }
         return -1;                          // Return where found or -1
     } // End of findContact
 
@@ -559,6 +565,7 @@ public class AddressBook extends JFrame implements ActionListener
     /**
      * Re-order the contacts in the database so that the names are in ascending alphabetic order
      */
+    // Tried to do a more interesting method of sorting, using comparables, but couldn't get it to work
 /*    private void hashMapSortAtoZ()
     {
         String[] sortedNames= Arrays.stream(name).sorted().toArray();
@@ -572,9 +579,8 @@ public class AddressBook extends JFrame implements ActionListener
             address[i++]=it.next();
         }
     }*/
-
     private void sortAtoZ(){
-        // Sorting strings reverse-alphabetically using bubble sort
+        // Sorting strings alphabetically using bubble sort
         String tempName, tempAddress, tempMobile, tempEmail;    //Setting the temporary variables for the bubbleSort
         for (int j = 0; j < currentSize - 1; j++) {     //Outer for-loop one behind the inner loop
             for (int i = j + 1; i < currentSize; i++) {     //Inner for-loop one ahead of the outer loop
