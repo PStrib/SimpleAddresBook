@@ -50,8 +50,8 @@ import javax.swing.event.*;
  *  o  the array declarations are complete and correct
  *  o  the method headers are complete and correct.
  *
- * @author
- * @version    2022
+ * @author  StudentID: 3112521
+ * @version    2023
  */
 public class AddressBook extends JFrame implements ActionListener
 {
@@ -527,7 +527,7 @@ public class AddressBook extends JFrame implements ActionListener
      */
     private void clearContacts()
     {
-        //Calls the deleteContact method for every contact
+        // Calls the deleteContact method for every contact
         for (int i=currentSize; i>0; i--){
             deleteContact(i);
         }
@@ -541,14 +541,12 @@ public class AddressBook extends JFrame implements ActionListener
      */
     private int findContact(String searchName)
     {
-        // TO BE DONE: Implement this method body - see comments above
         for(int i=0; i<currentSize; i++){
-            System.out.println(name[i]);
             if(name[i].equalsIgnoreCase(searchName)){
-                return i;
+                return i;       // Success! Return the index at which to find the searched name
             }
         }
-        return -1;                          // Return where found or -1
+        return -1;              // Failed to find the searched name. Returns -1
     } // End of findContact
 
     /**
@@ -559,6 +557,12 @@ public class AddressBook extends JFrame implements ActionListener
     private int findPartial(String searchText)
     {
         // TO BE DONE: Implement this method body - see comments above
+        searchText=searchText.toLowerCase();
+        for(int i=0; i<currentSize; i++){
+            if(name[i].toLowerCase().contains(searchText)){
+                return i;       // Success! Return the index at which to find the searched name
+            }
+        }
         return -1;                          // Return where found or -1
     } // End of findPartial
 
