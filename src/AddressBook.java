@@ -3,6 +3,7 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 import java.util.Map;
 import java.util.TreeMap;
@@ -558,9 +559,44 @@ public class AddressBook extends JFrame implements ActionListener
     /**
      * Re-order the contacts in the database so that the names are in ascending alphabetic order
      */
-    private void sortAtoZ()
+/*    private void hashMapSortAtoZ()
     {
+        String[] sortedNames= Arrays.stream(name).sorted().toArray();
 
+        final List<String> addressListCopy = Arrays.asList(address);
+        ArrayList<String> sortedList = new ArrayList<>(addressListCopy);
+        sortedList.sort(Comparator.comparing(s -> sortedNames[addressListCopy.indexOf(s)]));
+        var it=sortedList.iterator();
+        int i=0;
+        while (it.hasNext()){
+            address[i++]=it.next();
+        }
+    }*/
+
+    private void sortAtoZ(){
+        // Sorting strings reverse-alphabetically using bubble sort
+        String tempName, tempAddress, tempMobile, tempEmail;    //Setting the temporary variables for the bubbleSort
+        for (int j = 0; j < currentSize - 1; j++) {     //Outer for-loop one behind the inner loop
+            for (int i = j + 1; i < currentSize; i++) {     //Inner for-loop one ahead of the outer loop
+                if (name[j].compareTo(name[i]) > 0) {       //if the higher indexed name is lower alphabetically
+                    tempName = name[j];            //Assign the current lower indexed value to the temp variable
+                    tempAddress = address[j];      //Then do the same for the accompanying variables (address, mobile and email)
+                    tempMobile=mobile[j];          // ^^^
+                    tempEmail=email[j];            // ^^^
+
+                    name[j] = name[i];          //Copy the lower value string into the lower index
+                    address[j]=address[i];      //Repeat for the accompanying variables
+                    mobile[j]=mobile[i];        // ^^^
+                    email[j]=email[i];          // ^^^
+
+                    name[i] = tempName;         //Copy the value from the temp variables to the higher index position
+                    address[i]=tempAddress;     //Do the same for the accompanying variables
+                    mobile[i]=tempMobile;       // ^^^
+                    email[i]=tempEmail;         // ^^^
+                    //The swap has been completed and the loops iterate again until there are no more swaps made
+                }
+            }
+        }
     }
 
     /**

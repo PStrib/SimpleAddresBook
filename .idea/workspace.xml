@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bba4c499-8ca8-4f8d-9643-6fe2da760cb9" name="Changes" comment="Adds in commentation for the sortAtoZ method">
+    <list default="true" id="bba4c499-8ca8-4f8d-9643-6fe2da760cb9" name="Changes" comment="Deletes sortAtoZ and implements sortZtoA as a bubbleSort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddressBook.java" afterDir="false" />
     </list>
@@ -103,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681133581403</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Deletes sortAtoZ and implements sortZtoA as a bubbleSort">
+      <created>1681135350700</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681135350700</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +135,7 @@
     <MESSAGE value="Implements deleteContacts method but introduces a new minor error" />
     <MESSAGE value="Removes the debug print statement and starts work on the sortAtoZ statement" />
     <MESSAGE value="Adds in commentation for the sortAtoZ method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds in commentation for the sortAtoZ method" />
+    <MESSAGE value="Deletes sortAtoZ and implements sortZtoA as a bubbleSort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deletes sortAtoZ and implements sortZtoA as a bubbleSort" />
   </component>
 </project>
