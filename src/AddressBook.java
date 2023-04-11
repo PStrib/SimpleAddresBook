@@ -514,8 +514,8 @@ public class AddressBook extends JFrame implements ActionListener
     private void removeOneValue(int index, String[]array) {
         // This function sets one value from one array to null
         for (int i = index; i<array.length-1; i++){
-            if(i>=databaseSize-1){      // If the
-                array[i]= null;         //
+            if(i>=databaseSize-1){      // If the iteration is about to run out of database
+                array[i]= null;         // Set the last value to null
                 continue;
             }
             array[i] = array[i + 1];
@@ -556,7 +556,6 @@ public class AddressBook extends JFrame implements ActionListener
      */
     private int findPartial(String searchText)
     {
-        // TO BE DONE: Implement this method body - see comments above
         searchText=searchText.toLowerCase();
         for(int i=0; i<currentSize; i++){
             if(name[i].toLowerCase().contains(searchText)){
